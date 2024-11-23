@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Mission Trip Registration</h2>
+    
+    <!-- Begin Form -->
+    <form action="{{ url_for('trip') }}" method="POST">
+        <!-- CSRF Token -->
+        {{ form.hidden_tag() }}
+
+        <!-- Church Name Field -->
+        <div class="form-group">
+            {{ form.church_name.label(class="form-label") }}
+            {{ form.church_name(class="form-control") }}
+            {% if form.church_name.errors %}
+                <div class="text-danger">
+                    {{ form.church_name.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Contact Person Field -->
+        <div class="form-group">
+            {{ form.contact_person.label(class="form-label") }}
+            {{ form.contact_person(class="form-control") }}
+            {% if form.contact_person.errors %}
+                <div class="text-danger">
+                    {{ form.contact_person.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control") }}
+            {% if form.email.errors %}
+                <div class="text-danger">
+                    {{ form.email.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="form-group">
+            {{ form.phone.label(class="form-label") }}
+            {{ form.phone(class="form-control") }}
+            {% if form.phone.errors %}
+                <div class="text-danger">
+                    {{ form.phone.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Address Field -->
+        <div class="form-group">
+            {{ form.address.label(class="form-label") }}
+            {{ form.address(class="form-control") }}
+            {% if form.address.errors %}
+                <div class="text-danger">
+                    {{ form.address.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Number of Participants Field -->
+        <div class="form-group">
+            {{ form.num_participants.label(class="form-label") }}
+            {{ form.num_participants(class="form-control", min="1") }}
+            {% if form.num_participants.errors %}
+                <div class="text-danger">
+                    {{ form.num_participants.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Arrival Date Field -->
+        <div class="form-group">
+            {{ form.arrival_date.label(class="form-label") }}
+            {{ form.arrival_date(class="form-control", type="date") }}
+            {% if form.arrival_date.errors %}
+                <div class="text-danger">
+                    {{ form.arrival_date.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Departure Date Field -->
+        <div class="form-group">
+            {{ form.departure_date.label(class="form-label") }}
+            {{ form.departure_date(class="form-control", type="date") }}
+            {% if form.departure_date.errors %}
+                <div class="text-danger">
+                    {{ form.departure_date.errors[0] }}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block">{{ form.submit.label }}</button>
+    </form>
+    <!-- End Form -->
+</div>
+{% endblock %}
