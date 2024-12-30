@@ -6,7 +6,7 @@ class Config(object):
 #       ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'heic'}
         ALLOWED_EXTENSIONS = {'txt', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'odt', 'rtf', 'csv',
                       'png', 'jpg', 'jpeg', 'gif', 'heic', 'bmp', 'tiff', 'tif', 'webp', 'svg', 'raw',
-                      'zip', 'tar', 'gz', 'rar', '7z'}
+                      'zip', 'tar', 'gz', 'rar', '7z', 'img'}
         MAX_CONTENT_LENGTH = None
         SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
             'sqlite:///' + os.path.join(basedir, 'app.db')

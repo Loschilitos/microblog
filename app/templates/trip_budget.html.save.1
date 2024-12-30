@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container mt-5">
+        <h1 class="text-center mb-4">{{ church.church_name }}</h1>
+    <table class="table table-bordered table-striped">
+<thead>
+            <tr>
+                <th scope="col">Field</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item">Contact Person:</li><li class="list-group-item"> {{ church.contact_person }}</li>
+</ul>
+    <p><strong>Email:</strong> {{ church.email }}</p>
+    <p><strong>Phone:</strong> {{ church.phone or "Not provided" }}</p>
+    <p><strong>Address:</strong> {{ church.address or "Not provided" }}</p>
+    <p><strong>Number of Participants:</strong> {{ church.num_participants }}</p>
+    <p><strong>Transportation cost:</strong> 
+{% if church.num_participants == 20  %}  
+    <p> $2,000 </p>
+{% endif %} 
+
+
+
+    <a href="/churches">Back to All Churches</a>
+</div>
+
+
+{% endblock %}

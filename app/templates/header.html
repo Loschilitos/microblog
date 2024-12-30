@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="bi-c-square-fill" viewBox="0 0 16 16">
+    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+  </symbol>
+</svg>
+
+  <header class="d-flex align-items-center pb-2 mb-3 border-bottom gap-4">
+    <a href="{{ url_for('index') }}" class="d-flex align-items-center text-body-emphasis text-decoration-none me3">
+      <svg class="bi me-2" width="40" height="32">
+      <use xlink:href="#bi-c-square-fill"/></svg>
+      <span class="fs-4"> Los Chilitos</a></span>
+    </a>
+ 
+{% if current_user.is_anonymous %}
+    <a href="{{ url_for('login') }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+      Login
+    </a>
+  <a href="{{ url_for('contact') }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+    Contact us
+  </a>
+
+
+{% else %}
+    <a href="{{ url_for('dashboard') }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+      Dashboard
+    </a>
+<a href="{{ url_for('trip') }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+      Register
+    </a>
+    <a href="{{ url_for('user', username=current_user.username) }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+      Profile
+    </a>
+<a href="{{ url_for('upload_file') }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+      Uploads
+    </a>
+    <a href="{{ url_for('logout') }}" class="text-body-emphasis text-decoration-none fs-5 me-3">
+      Logout
+    </a>
+
+{% endif %} 
+ </header>

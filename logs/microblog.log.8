@@ -1,0 +1,143 @@
+2024-12-05 20:26:38,105 ERROR: Exception on / [GET] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 25, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/lucas/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/lucas/microblog/app/templates/base.html", line 122, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/templates/index.html", line 17, in block 'content'
+    {% include navbar.html %}
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'navbar' is undefined
+2024-12-05 20:32:05,886 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 20:32:09,125 ERROR: Exception on / [GET] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 25, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/lucas/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/lucas/microblog/app/templates/base.html", line 107, in top-level template code
+    {% block navbar %}
+  File "/home/lucas/microblog/app/templates/index.html", line 19, in block 'navbar'
+    {% include navbar.html %}
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'navbar' is undefined
+2024-12-05 20:32:50,871 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 20:36:07,375 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 20:37:26,339 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 20:37:54,910 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 20:38:47,307 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 20:41:55,151 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 21:10:18,040 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 21:10:35,777 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 21:23:38,064 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 21:26:01,370 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:01:28,719 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:01:31,813 ERROR: Exception on / [GET] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 25, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/lucas/microblog/app/templates/index.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/home/lucas/microblog/app/templates/base.html", line 125, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/templates/index.html", line 24, in block 'content'
+    <a href="{{ url_for('another_page') }}" class="text-body-emphasis text-decoration-none fs-5">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'another_page'. Did you mean 'flash_message' instead?
+2024-12-05 22:06:02,033 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:10:17,264 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:16:41,635 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:19:16,190 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:20:03,036 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:20:48,765 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 22:27:44,430 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-06 17:25:05,005 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 03:55:48,006 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 03:58:24,239 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 04:00:07,798 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 04:01:39,851 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>CSV Data</h1>
+        <div class="table-responsive">
+<p><strong>Average Donation:</strong> ${{ average | round(2) }}</p>
+
+            <!-- Display the HTML table here -->
+            {{ table|safe }}
+        </div>
+    </div>
+</body>
+</html>

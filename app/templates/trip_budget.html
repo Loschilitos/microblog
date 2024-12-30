@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container mt-5">
+        <h1 class="text-center mb-4">Budget for {{ church.church_name }}</h1>
+
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item">Arriving: {{ church.arrival_date.strftime('%m/%d/%Y') }}</li>
+<li class="list-group-item"> Departing: {{ church.departure_date.strftime('%m/%d/%Y') }}</li>
+<li class="list-group-item">
+        Total Days: 
+        {% set total_days = (church.departure_date - church.arrival_date).days + 1 %}
+        {{ total_days }}
+    </li>
+</ul>
+<ul class="list-group list-group-horizontal"> <li class="list-group-item">Lodging Cost Mission House:</li>
+<li class="list-group-item"> {% set amount = (150 * church.num_participants) %} ${{ amount }}</li>
+</ul>
+<ul class="list-group list-group-horizontal"> 
+<li class="list-group-item">Participants:</li>
+<li class="list-group-item">{{ church.num_participants }}</li> 
+<li class="list-group-item">Price: $150</li>
+</ul>
+<ul class="list-group list-group-horizontal"> <li class="list-group-item">Transportation cost:</li>
+<li class="list-group-item"> {% if church.num_participants == 20  %}
+  $2,000 
+{% endif %} </li> <br />
+<!--
+-->
+</div>
+<div>
+
+<form method="POST" action="">
+ 
+{% for current_day in days %}
+    <!-- Day Header -->
+    <h4 class="mt-4">Day {{ loop.index }}: {{ current_day.strftime('%A, %m/%d/%Y') }}</h4>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label for="breakfasts_{{ loop.index }}" class="form-label">Breakfast</label>
+            <select class="form-select" id="breakfasts_{{ loop.index }}" name="breakfasts_{{ loop.index }}">
+                <option value="0">Light Breakfast: $4</option>
+                <option value="1">Guatemalan Breakfast: $7</option>
+		<option value="2">None: $0</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="breakfast_people_{{ loop.index }}" class="form-label"># of People</label>
+            <select class="form-select" id="breakfast_people_{{ loop.index }}" name="breakfast_people_{{ loop.index }}">
+                 <!-- Default autofill option -->
+                    {% for n in range(church.num_participants + 1) %}
+                        <option value="{{ n }}" {% if n == church.num_participants %}selected{% endif %}>{{ n }}</option>
+                    {% endfor %}
+
+            </select>
+        </div>
+
+        <!-- Lunch Column -->
+        <div class="col-md-2">
+            <label for="lunches_{{ loop.index }}" class="form-label">Lunch</label>
+            <select class="form-select" id="lunches_{{ loop.index }}" name="lunches_{{ loop.index }}">
+                <option value="0">Guatemalan: $7</option>
+                <option value="1">Fast Food: $10</option>
+                <option value="2">Antigua: $15</option>
+        	<option value="3">None: $0</option>    
+	</select>
+        </div>
+        <div class="col-md-2">
+            <label for="lunch_people_{{ loop.index }}" class="form-label"># of People</label>
+
+            <select class="form-select" id="lunch_people_{{ loop.index }}" name="lunch_people_{{ loop.index }}">
+                {% for n in range(0, 30) %}
+                <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Dinner Column -->
+        <div class="col-md-2">
+            <label for="dinners_{{ loop.index }}" class="form-label">Dinner</label>
+            <select class="form-select" id="dinners_{{ loop.index }}" name="dinners_{{ loop.index }}">
+                <option value="0">Guatemalan: $7</option>
+                <option value="1">Fast Food: $10</option>
+                <option value="2">Antigua: $15</option>
+                <option value="3">None: $0</option>
+           
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="dinner_people_{{ loop.index }}" class="form-label"># of People</label>
+            <select class="form-select" id="dinner_people_{{ loop.index }}" name="dinner_people_{{ loop.index }}">
+                {% for n in range(0, 30) %}
+                <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+        </div>
+   
+{% endfor %}
+</form>
+{% if daily_breakdown %}
+    <h4>Daily Costs</h4>
+    <ul>
+        {% for day in daily_breakdown %}
+            <li>Day {{ day.day }}: ${{ day.cost }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Total Cost: ${{ total_cost }}</h3>
+{% endif %}
+</div>
+<div>
+
+    <a href="/churches">Back to All Churches</a>
+</div>
+
+
+{% endblock %}

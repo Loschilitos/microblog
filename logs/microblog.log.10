@@ -1,0 +1,125 @@
+2024-12-03 23:32:59,124 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-03 23:49:06,394 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-03 23:51:49,215 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-03 23:52:02,718 ERROR: Exception on /emmaus church [POST] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 192, in church_detail
+    breakfast_cost = int(form_data.get(f'breakfasts_{i}'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2024-12-03 23:52:19,978 ERROR: Exception on /emmaus church [POST] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 192, in church_detail
+    breakfast_cost = int(form_data.get(f'breakfasts_{i}'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2024-12-03 23:54:42,331 ERROR: Exception on /emmaus church [POST] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 192, in church_detail
+    breakfast_cost = int(form_data.get(f'breakfasts_{i}'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2024-12-03 23:56:08,498 ERROR: Exception on /emmaus church [POST] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 192, in church_detail
+    breakfast_cost = int(form_data.get(f'breakfasts_{i}'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2024-12-04 00:02:57,805 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 00:02:57,871 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 00:02:57,963 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 00:02:58,012 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:07:20,505 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:08:05,487 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:14:58,442 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:19:45,068 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:20:30,466 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:20:30,466 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:20:30,466 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 22:20:30,502 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:00:47,580 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:13:22,217 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:13:45,492 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:15:18,031 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:16:14,661 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:17:34,411 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:17:34,411 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:17:34,412 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:17:34,429 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:23:48,273 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:25:04,288 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:26:02,821 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:28:50,697 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:30:07,083 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:32:00,746 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:32:41,815 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:33:57,966 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:34:41,596 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:35:23,038 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:35:23,038 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:35:23,038 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-04 23:35:23,137 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:03:29,441 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:04:50,129 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:05:54,529 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:12:14,254 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:15:41,710 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:16:51,945 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:35:53,091 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 18:39:00,116 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:01:39,721 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:02:24,421 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:08:47,718 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:09:01,342 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:14:35,102 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:16:24,817 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:19:02,041 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-05 19:26:53,197 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]

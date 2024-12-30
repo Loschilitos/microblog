@@ -1,0 +1,125 @@
+2024-12-07 21:18:32,938 ERROR: Exception on /pandas [GET] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 227, in display_csv
+    average_donation = df['amount'].mean()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/series.py", line 6549, in mean
+    return NDFrame.mean(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12420, in mean
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/series.py", line 6457, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 720, in nanmean
+    the_sum = _ensure_numeric(the_sum)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 1701, in _ensure_numeric
+    raise TypeError(f"Could not convert string '{x}' to numeric")
+TypeError: Could not convert string '25.8625.25102.50102.50472.7550.00100.0020.65100.2510.25100.3030.0075.00600.00500.0096.3737.50102.5082.061,259.90204.7025.0050.00817.88500.0050.001,000.3082.06250.001,070.28204.7051.41' to numeric
+2024-12-07 21:19:38,102 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 21:23:18,694 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 21:25:08,288 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 21:25:08,288 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 21:25:08,289 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 21:25:08,292 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 22:33:19,657 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 22:33:27,502 ERROR: Exception on /finance [GET] [in /home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/app/routes.py", line 241, in finance
+    return render_template('finance.html', total_spent=total_spent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/lucas/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/lucas/microblog/app/templates/finance.html", line 10, in template
+    <p>Total Spent: ${{ total_spent:.2f }}</p> <!-- Display the total amount spent -->
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2024-12-07 22:34:57,964 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 22:36:39,548 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 22:40:18,638 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-07 22:41:22,713 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 17:35:53,866 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 17:35:53,934 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 17:35:54,136 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 17:35:54,178 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 20:36:25,764 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 20:36:25,765 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 20:36:25,766 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 20:36:25,766 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 22:33:57,961 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 22:33:57,969 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 22:33:57,985 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-08 22:33:57,989 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 01:01:55,781 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 01:01:55,901 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 01:01:55,904 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 01:01:55,974 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:26:20,594 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:26:20,595 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:26:20,595 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:26:20,767 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:30:50,670 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:30:50,679 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:30:50,734 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:30:50,796 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:49:46,016 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:49:46,016 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:49:46,028 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 02:49:46,061 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 15:05:57,094 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 15:05:57,105 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 15:05:57,104 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 15:05:57,110 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]
+2024-12-09 15:18:20,424 INFO: Microblog startup [in /home/lucas/microblog/app/__init__.py:32]

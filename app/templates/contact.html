@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .contact-title {
+            margin-top: 20px;
+            text-align: center;
+            color: #4a4a4a;
+        }
+        .contact-container {
+            background: #ffffff;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-info i {
+            font-size: 20px;
+            color: #007bff;
+            margin-right: 10px;
+        }
+        .social-icons {
+            text-align: center;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="contact-title">Get in Touch</h1>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i>KM 58 CAES Casa 58, <br> Condado de Santa Marta, 
+              <br>  Barberena, Santa Rosa, Guatemala</p>
+            <p><i class="fas fa-phone-alt"></i>+502 3019 7208</p>
+            <p><i class="fas fa-envelope"></i>mitch.munoz@acts29.com</p>
+        </div>
+
+<!--
+        <form method="POST" action="/submit_contact_form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit btn-block">Send Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+-->
+
+
+{% endblock %}

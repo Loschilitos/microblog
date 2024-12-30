@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% include "header.html" %}
     <h1>Hi, {{ current_user.username }}!</h1>
     {% for post in posts %}
     <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
@@ -21,26 +22,40 @@
         </thead>
         <tbody>
           {% for church in churches %}
+<form method="POST" action="">
             <tr>
             <!--  <td>{{ church.id }}</td> -->
-              <td>{{ church.church_name }}</td>
-              <td>{{ church.contact_person }}</td>
+		{% if church.email == current_user.email %}
+              <td><input type="text" name="church_name" value="{{ church.church_name }}"></td>
+              <td contenteditable="true">{{ church.contact_person }}</td>
               <td>{{ church.email }}</td>
-              <td>{{ church.phone[:3] }}-{{ church.phone[3:6] }}-{{ church.phone[6:] }}</td>
-              <td>{{ church.address }}</td>
-              <td>{{ church.num_participants }}</td>
-              <td>{{ church.arrival_date.strftime('%m-%d-%Y') }}</td>
-              <td>{{ church.departure_date.strftime('%m-%d-%Y') }}</td>
-            </tr>
-          {% else %}
+              <td contenteditable="true">{{ church.phone[:3] }}-{{ church.phone[3:6] }}-{{ church.phone[6:] }}</td>
+              <td contenteditable="true">{{ church.address }}</td>
+              <td contenteditable="true">{{ church.num_participants }}</td>
+              <td contenteditable="true">{{ church.arrival_date.strftime('%m-%d-%Y') }}</td>
+              <td contenteditable="true">{{ church.departure_date.strftime('%m-%d-%Y') }}</td>
+	      <td><a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-sm">Update</a></td>
+
+	{% else %}
+  <td>{{ church.church_name }}</td>
+  <td>{{ church.contact_person }}</td>
+  <td>{{ church.email }}</td>
+  <td>{{ church.phone[:3] }}-{{ church.phone[3:6] }}-{{ church.phone[6:] }}</td>
+  <td>{{ church.address }}</td>
+  <td>{{ church.num_participants }}</td>
+  <td>{{ church.arrival_date.strftime('%m-%d-%Y') }}</td>
+  <td>{{ church.departure_date.strftime('%m-%d-%Y') }}</td>
+  <td></td>
+	</tr>
+	{% endif %}
+	</form>
+          {% endfor %}
+          {% if churches|length == 0 %}
+
             <tr>
               <td colspan="9" class="text-center">No registrations found.</td>
             </tr>
-          {% endfor %}
+          {% endif %}
         </tbody>
       </table>
-
-
-
-
 {% endblock %}

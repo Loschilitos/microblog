@@ -5,16 +5,10 @@ from wtforms.fields import DateField  # Use DateField instead of DateTimeField
 from app.models import User
 #7
 class RegistrationForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password', message='Passwords must match')])
     submit = SubmitField('Create Account')
-#14
-    def validate_username(self, username):
-        user = User.query.filter_by(username=username.data).first()
-        if user is not None:
-            raise ValidationError('Please use a different username.')
 #19
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
@@ -22,7 +16,7 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Please use a different email address.')
 #24
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
@@ -59,3 +53,11 @@ class ChurchSignupForm(FlaskForm):
             raise ValidationError('Departure date must be after the arrival date.')
 
 
+class Tb(FlaskForm):
+    lodging = IntegerField('Lodging')
+    food = IntegerField('Food')
+    transportation = IntegerField('Transportation')
+    translators = IntegerField('Translators')
+
+class QuoteForm(FlaskForm):
+    heading = StringField('Quote', default="Quote", validators=[DataRequired()])

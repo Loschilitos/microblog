@@ -1,5 +1,112 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <h1>Have you tried turning it off and on again?</h1>
+{% include "header.html" %}
+
+    {% if title %}
+    <title>{{ title }} - Los Chilitos</title>
+    {% else %}
+    <title>Welcome to Los Chilitos</title>
+    {% endif %}
+
+<style>
+.welcome-section {
+   background-image: url('/static/images/test.jpg'); /* Path to the image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating of the image */
+}
+</style>
+  <main>
+<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid"
+    width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+    aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false">
+  <rect width="100%" height="100%" fill="#868e96"></rect>
+  <image href="/static/images/home.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+</svg>
+ <div class="row mt-2">
+      <div class="col-md-4">
+      </div>
+   <div class="col-md-8 mb-5">
+  <a href="{{ url_for('trip') }}" class="btn btn-primary btn-lg px-4 justify-content-center 
+align-items-center">
+    Trip Registration
+  </a>
+     </div>
+</div>
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2 class="text-body-emphasis">Mission Projects</h2>
+        <p>A bunch of profound text will go here one day</p>
+        <ul class="list-unstyled ps-0">
+          <li>
+            <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Dont click here
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              I said dont click
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Dont click here either
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Have your tried turning it off and on again?
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="text-body-emphasis">Guides</h2>
+        <p>Ready for a bunch of IT jokes to just fill space and see what stuff looks like?</p>
+        <ul class="list-unstyled ps-0">
+          <li>
+            <a class="icon-link mb-1" href="#">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              I dont have any
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+             Sorry
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+             Better luck next time 
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Next next time 
+            </a>
+          </li>
+          <li>
+            <a class="icon-link mb-1" href="#">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Continue to next time
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+{% include "footer.html" %}
 {% endblock %}

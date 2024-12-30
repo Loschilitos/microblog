@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #007BFF;
+        }
+        .header p {
+            font-size: 14px;
+            color: #666;
+        }
+        .details {
+            margin-bottom: 20px;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .quote-details {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+        .quote-details h3 {
+            margin: 0 0 10px 0;
+            color: #007BFF;
+        }
+        .quote-details p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .terms {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Quote</h1>
+            <p>Date: <strong id="quote-date">December 19, 2024</strong></p>
+        </div>
+        <div class="details">
+            <p><strong>Client Name:</strong> <span id="client-name">John Doe</span></p>
+            <p><strong>Project:</strong> <span id="project-description">Website Development</span></p>
+        </div>
+        <div class="quote-details">
+            <h3>Estimated Cost</h3>
+            <p><strong>Total:</strong> $<span id="quote-cost">3,500.00</span></p>
+        </div>
+        <div class="terms">
+            <p><strong>Terms and Conditions:</strong></p>
+            <p id="terms-text">50% upfront payment required. Remaining 50% upon project completion. This quote is valid for 30 days.</p>
+        </div>
+        <div class="footer">
+            <p>Thank you for considering my services. Please feel free to reach out with any questions.</p>
+            <p>Sincerely, <strong>[Your Name]</strong></p>
+        </div>
+    </div>
+</body>
+</html>

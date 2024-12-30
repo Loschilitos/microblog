@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container mt-5">
+        <h1 class="text-center mb-4">Budget for {{ church.church_name }}</h1>
+
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item">Arriving: {{ church.arrival_date.strftime('%m/%d/%Y') }}</li>
+<li class="list-group-item"> Departing: {{ church.departure_date.strftime('%m/%d/%Y') }}</li>
+<li class="list-group-item">
+        Total Days: 
+        {% set total_days = (church.departure_date - church.arrival_date).days + 1 %}
+        {{ total_days }}
+    </li>
+</ul>
+<ul class="list-group list-group-horizontal"> <li class="list-group-item">Lodging Cost Mission House:</li>
+<li class="list-group-item"> {% set amount = (150 * church.num_participants) %} ${{ amount }}</li>
+</ul>
+<ul class="list-group list-group-horizontal"> 
+<li class="list-group-item">Participants:</li>
+<li class="list-group-item">{{ church.num_participants }}</li> 
+<li class="list-group-item">Price: $150</li>
+</ul>
+<ul class="list-group list-group-horizontal"> <li class="list-group-item">Transportation KM/Driven:</li>
+<li class="list-group-item"> {% if church.num_participants == 20  %}
+  $2,000 
+{% endif %} </li>
+<li class="list-group-item">Lodging for driver: $140</li>
+<li class="list-group-item">Meals for driver: </li>
+ <br />
+<!--
+    <p><strong>Email:</strong> {{ church.email }}</p>
+    <p><strong>Phone:</strong> {{ church.phone or "Not provided" }}</p>
+    <p><strong>Address:</strong> {{ church.address or "Not provided" }}</p>
+    <p><strong>Number of Participants:</strong> {{ church.num_participants }}</p>
+-->
+</div>
+
+<div class="container mt-5">
+</div>
+
+
+<div>
+
+    <a href="/churches">Back to All Churches</a>
+</div>
+
+
+{% endblock %}
